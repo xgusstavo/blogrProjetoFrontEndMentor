@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+    --fontPrimary: 'Ubuntu';
+    --fontSecondary: 'Overpass';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    overflow-x: hidden;
+}
+
+.bg {
+    background-image: url("images/bg-pattern-intro-desktop.svg"), linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-size: 280vh;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 60vh;
+    border-radius: 0px 0px 0px 150px;
+}
+
+.logo {
+    width: 120px;
+    height: fit-content;
+    margin: 0px 10px;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.logo-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    font-family: var(--fontPrimary), sans-serif;
+}
+
+nav li {
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: .5s;
+}
+
+nav ul li {
+    margin: 0px 10px;
+}
+
+nav li a {
+    color: rgba(255, 255, 255, 0.788);
+    text-decoration: none;
+}
+
+nav li ul {
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all .5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+}
+
+nav li ul li {
+    clear: both;
+    width: 100%;
+}
+
+nav li ul li a {
+    color: black;
+}
+
+nav ul li:hover, ul li:focus-within {
+    cursor: pointer;
+    transition: .3s;
+}
+
+ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+nav ul li ul li a:hover {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+/* Controla a exibição do dropdown */
+
+nav ul li:hover>ul, ul li:focus-within>ul, ul li ul:hover, ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.div-header {
+    text-align: center;
+    color: white;
+}
+
+.loginRegister li {
+    padding: 10px 40px;
+    transition: 0s;
+}
+
+
+.loginRegister li:hover {
+    background-color: rgba(204, 204, 204, 0.264);
+    border-radius: 30px;
+    color: white;
+    transition: 0s;
+}
+
+.loginRegister li a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.div-header {
+    font-family: var(--fontPrimary), sans-serif;
+}
+
+.div-header > h1 {
+    font-size: 3rem;
+    padding: 20px;
+    padding-top: 180px;
+    font-weight: 500;
+}
+
+.div-header > P {
+    padding: 20px;
+}
+
+.div-header > button {
+    padding: 15px 0px;
+    width: 150px;
+    margin: 15px;
+    border-radius: 40px;
+    border-style: none;
+    background-color: rgba(204, 204, 204, 0.456);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.div-header > button:hover {
+    background-color: white;
+    color: hsl(353, 41%, 52%);
+    cursor: pointer;
+}
+
+/* body */
+
+.articleOne {
+    color: hsl(240, 9%, 30%);
+    line-height: 1.7rem;
+    font-family: var(--fontPrimary), sans-serif;
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.articleOne h2 {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 2rem;
+    margin-bottom: -100px;
+    margin-left: 0px;
+    font-weight: 700;
+}
+
+.articleOne h3 {
+    font-size: 25px;
+    margin-bottom: 40px;
+    margin-top: 100px;
+}
+
+.articleOne p {
+    margin-bottom: 60px;
+}
+
+.oneLeft {
+    position: relative;
+    margin: 0 150px;
+}
+
+.articleOne img {
+    margin-right: -250px;
+}
+
+.articleTwo {
+    background-image: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    border-radius: 0px 160px;
+    margin-top: 80px;
+    height: 400px;
+    font-family: var(--fontSecondary);
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.articleTwo h3 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.articleTwo p {
+    font-size: .9rem;
+    line-height: 1.7rem;
+}
+
+.flexTwo {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.articleTwo img {
+    padding-top: 40px;
+    padding-left: 150px;
+}
+
+.articleThree {
+    display: flex;
+    align-items: center;
+    font-family: var(--fontSecondary), sans-serif;
+}
+
+.articleThree img {
+    margin-left: -275px;
+}
+
+.flexThree {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.articleThree h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.articleThree p {
+    margin-bottom: 35px;
+    font-size: .9rem;
+    line-height: 1.7rem;
+}
+
+/* footer */
+
+footer {
+    background-color: hsl(240, 10%, 16%);
+    color: white;
+    font-family: var(--fontPrimary);
+    border-radius: 0 100px 0 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+footer img {
+    width: 100px;
+    height: fit-content;
+    margin-top: 30px;
+}
+
+footer h4 {
+    font-size: .9rem;
+    margin: 30px 0;
+}
+
+.footerDiv {
+    margin-right: 60px;
+}
+
+.footerDiv ul {
+    list-style: none;
+}
+
+.footerDiv a {
+    text-decoration: none;
+    color: hsl(240, 2%, 79%);
+    font-size: .8rem;
+}
+
+.footerDiv li {
+    margin-bottom: 10px;
+}
